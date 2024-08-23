@@ -7,7 +7,7 @@ export const Voyages = (element) => {
   let searchBar; // Référence à la barre de recherche
 
   const fetchVoyages = () => {
-    fetch("./src/storage/voyages.json")
+    fetch("/src/storage/voyages.json")
       .then((response) => response.json())
       .then((data) => {
         voyages = data;
