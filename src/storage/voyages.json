@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "nom": "Bali",
+    "destinations": ["Kuta", "Ubud", "Seminyak"],
+    "depart": "2024-09-01",
+    "retour": "2024-09-15",
+    "budget": 1500,
+    "description": "Explore the beautiful beaches of Bali.",
+    "image": "./img/bali.webp"
+  },
+  {
+    "id": 2,
+    "nom": "Paris",
+    "destinations": ["Eiffel Tower", "Louvre", "Notre Dame"],
+    "depart": "2024-10-10",
+    "retour": "2024-10-20",
+    "budget": 2000,
+    "description": "Discover the city of love and lights.",
+    "image": "/img/paris.webp"
+  },
+  {
+    "id": 3,
+    "nom": "New York",
+    "destinations": ["Statue of Liberty", "Central Park", "Times Square"],
+    "depart": "2024-11-05",
+    "retour": "2024-11-15",
+    "budget": 1800,
+    "description": "Experience the vibrant city ",
+    "image": "/img/newyork.webp"
+  },
+  {
+    "id": 4,
+    "nom": "Tokyo",
+    "destinations": ["Shibuya", "Asakusa", "Akihabara"],
+    "depart": "2024-12-01",
+    "retour": "2024-12-10",
+    "budget": 2200,
+    "description": "Immerse yourself in the blend of tradition and technology.",
+    "image": "/img/tokyo.webp"
+  },
+  {
+    "id": 5,
+    "nom": "Sydney",
+    "destinations": ["Sydney Opera House", "Bondi Beach", "The Rocks"],
+    "depart": "2024-12-20",
+    "retour": "2025-01-05",
+    "budget": 2500,
+    "description": "Enjoy the sun and surf down under in Sydney, Australia.",
+    "image": "/img/sydney.webp"
+  },
+  {
+    "id": 6,
+    "nom": "Cape Town",
+    "destinations": ["Table Mountain", "Robben Island", "Kirstenbosch Gardens"],
+    "depart": "2024-11-25",
+    "retour": "2024-12-05",
+    "budget": 1700,
+    "description": "Discover the beauty and history of South Africa's Cape Town.",
+    "image": "/img/capetown.webp"
+  },
+  {
+    "id": 7,
+    "nom": "Rome",
+    "destinations": ["Colosseum", "Vatican City", "Trevi Fountain"],
+    "depart": "2024-10-15",
+    "retour": "2024-10-25",
+    "budget": 2100,
+    "description": "Step back in time and explore the wonders of ancient Rome.",
+    "image": "/img/rome.webp"
+  },
+  {
+    "id": 8,
+    "nom": "Rio de Janeiro",
+    "destinations": [
+      "Christ the Redeemer",
+      "Copacabana Beach",
+      "Sugarloaf Mountain"
+    ],
+    "depart": "2024-11-01",
+    "retour": "2024-11-10",
+    "budget": 1900,
+    "description": "Enjoy the vibrant culture and breathtaking scenery of Rio.",
+    "image": "/img/rio.webp"
+  },
+  {
+    "id": 9,
+    "nom": "Bangkok",
+    "destinations": ["Grand Palace", "Wat Arun", "Chatuchak Market"],
+    "depart": "2024-09-20",
+    "retour": "2024-09-30",
+    "budget": 1400,
+    "description": "Experience the rich history and lively streets of Bangkok.",
+    "image": "/img/bangkok.webp"
+  },
+  {
+    "id": 10,
+    "nom": "London",
+    "destinations": ["Big Ben", "Tower of London", "Buckingham Palace"],
+    "depart": "2024-10-05",
+    "retour": "2024-10-15",
+    "budget": 2300,
+    "description": "Explore the iconic landmarks and rich history of London.",
+    "image": "/img/london.webp"
+  },
+  {
+    "id": 11,
+    "nom": "Dubai",
+    "destinations": ["Burj Khalifa", "Dubai Mall", "Palm Jumeirah"],
+    "depart": "2024-12-05",
+    "retour": "2024-12-15",
+    "budget": 2700,
+    "description": "Experience luxury and innovation in the heart of the UAE.",
+    "image": "/img/dubai.webp"
+  },
+  {
+    "id": 12,
+    "nom": "Maui",
+    "destinations": ["Haleakalā", "Road to Hana", "Kaanapali Beach"],
+    "depart": "2024-11-10",
+    "retour": "2024-11-20",
+    "budget": 2600,
+    "description": "Relax and unwind in the tropical paradise of Maui.",
+    "image": "/img/maui.webp"
+  },
+  {
+    "id": 13,
+    "nom": "Santorini",
+    "destinations": ["Oia", "Fira", "Akrotiri"],
+    "depart": "2024-09-15",
+    "retour": "2024-09-25",
+    "budget": 2000,
+    "description": "Witness stunning sunsets and whitewashed architecture.",
+    "image": "/img/santorini.webp"
+  },
+  {
+    "id": 14,
+    "nom": "Istanbul",
+    "destinations": ["Hagia Sophia", "Blue Mosque", "Topkapi Palace"],
+    "depart": "2024-10-20",
+    "retour": "2024-10-30",
+    "budget": 1600,
+    "description": "Explore the crossroads of history in Istanbul, Turkey.",
+    "image": "/img/istanbul.webp"
+  },
+  {
+    "id": 15,
+    "nom": "Los Angeles",
+    "destinations": ["Hollywood", "Santa Monica", "Beverly Hills"],
+    "depart": "2024-11-25",
+    "retour": "2024-12-05",
+    "budget": 2400,
+    "description": "Experience the glitz and glamour of Los Angeles.",
+    "image": "/img/losangeles.webp"
+  },
+  {
+    "id": 16,
+    "nom": "Vancouver",
+    "destinations": [
+      "Stanley Park",
+      "Granville Island",
+      "Capilano Suspension Bridge"
+    ],
+    "depart": "2024-12-10",
+    "retour": "2024-12-20",
+    "budget": 2200,
+    "description": "Explore the natural beauty and vibrant culture of Vancouver.",
+    "image": "/img/vancouver.webp"
+  }
+]
