@@ -1,24 +1,10 @@
 import { VoyageCard } from "../components/VoyageCard";
+import voyages from "../storage/voyages.json"; // Importation directe du fichier JSON
 
 export const Voyages = (element) => {
   const itemsPerPage = 9; // Nombre de voyages par page
   let currentPage = 1; // Page actuelle
-  let voyages = []; // Stockage des voyages complets
   let searchBar; // Référence à la barre de recherche
-
-  const fetchVoyages = () => {
-    fetch("/src/storage/voyages.json")
-      .then((response) => response.json())
-      .then((data) => {
-        voyages = data;
-        initializeSearchBar(); // Initialiser la barre de recherche une fois
-        renderVoyages(); // Rendu initial de la première page
-      })
-      .catch((error) => {
-        console.error("Erreur lors du chargement des voyages", error);
-        element.innerHTML = `<p class="text-danger">Une erreur est survenue lors du chargement des voyages.</p>`;
-      });
-  };
 
   const initializeSearchBar = () => {
     searchBar = document.createElement("input");
@@ -49,7 +35,7 @@ export const Voyages = (element) => {
 
     element.innerHTML = `
       <div class="container my-5">
-        <h1>Nos Voyages</h1>
+        <h1 class="text-center">Nos Voyages</h1>
         <div id="search-container"></div>
         <div class="row">
           ${voyagesHtml}
@@ -70,6 +56,7 @@ export const Voyages = (element) => {
       searchBar.focus();
     }, 0);
 
+    // Attacher les événements de pagination après le rendu
     const paginationButtons = document.querySelectorAll(".pagination button");
     paginationButtons.forEach((button) => {
       button.addEventListener("click", (e) => {
@@ -110,5 +97,6 @@ export const Voyages = (element) => {
     return buttonsHtml;
   };
 
-  fetchVoyages(); // Chargement des voyages et rendu initial
+  initializeSearchBar(); // Initialisation de la barre de recherche
+  renderVoyages(); // Rendu initial de la première page
 };
