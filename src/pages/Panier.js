@@ -24,7 +24,6 @@ export const Panier = (element) => {
       )
       .join("");
 
-    // Ajouter un event listener à chaque bouton "Supprimer"
     reservationList.querySelectorAll("button").forEach((button) => {
       button.addEventListener("click", () => {
         removeReservation(button.dataset.index);

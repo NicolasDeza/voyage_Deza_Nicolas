@@ -57,6 +57,14 @@ export const Voyage = (element) => {
               <label for="clientPhone" class="form-label">Numéro de téléphone</label>
               <input type="tel" class="form-control" id="clientPhone" required>
             </div>
+            <div class="mb-3">
+              <label for="startDate" class="form-label">Date de Départ</label>
+              <input type="date" class="form-control" id="startDate" required>
+            </div>
+            <div class="mb-3">
+              <label for="endDate" class="form-label">Date de Retour</label>
+              <input type="date" class="form-control" id="endDate" required>
+            </div>
             <button type="submit" class="btn btn-primary btn-lg mt-3">Réserver ce voyage</button>
           </form>
         </div>
@@ -72,6 +80,8 @@ export const Voyage = (element) => {
       const clientSurname = document.getElementById("clientSurname").value;
       const clientEmail = document.getElementById("clientEmail").value;
       const clientPhone = document.getElementById("clientPhone").value;
+      const startDate = document.getElementById("startDate").value;
+      const endDate = document.getElementById("endDate").value;
 
       const client = {
         nom: clientName,
@@ -79,18 +89,18 @@ export const Voyage = (element) => {
         email: clientEmail,
         telephone: clientPhone,
       };
-      addReservation(voyage, client);
+      addReservation(voyage, client, startDate, endDate);
     });
 
-  const addReservation = (voyage, client) => {
+  const addReservation = (voyage, client, startDate, endDate) => {
     let reservations = JSON.parse(localStorage.getItem("reservations")) || [];
     const reservation = {
       client,
       voyageNom: voyage.nom,
       voyageId: voyage.id,
-      dateDepart: voyage.depart, // Ajout de la date de début
-      dateRetour: voyage.retour, // Ajout de la date de fin
-      dateReservation: new Date().toLocaleDateString(), // Date de réservation
+      dateDepart: startDate,
+      dateRetour: endDate,
+      dateReservation: new Date().toLocaleDateString(),
       statut: "En attente",
     };
     reservations.push(reservation);
