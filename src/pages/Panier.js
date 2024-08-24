@@ -1,14 +1,6 @@
-// Panier.js
 export const Panier = (element) => {
-  // Récupérer les réservations depuis le LocalStorage
   let reservations = JSON.parse(localStorage.getItem("reservations")) || [];
 
-  // Fonction pour sauvegarder les réservations dans le LocalStorage
-  const saveReservations = () => {
-    localStorage.setItem("reservations", JSON.stringify(reservations));
-  };
-
-  // Fonction pour afficher les réservations dans le tableau
   const renderReservations = () => {
     const reservationList = element.querySelector("#reservation-list");
     if (reservations.length === 0) {
@@ -16,20 +8,19 @@ export const Panier = (element) => {
       return;
     }
 
-    // Générer le contenu du tableau
     reservationList.innerHTML = reservations
       .map(
         (reservation, index) => `
-      <tr>
-        <td>${reservation.client.nom} ${reservation.client.prenom}</td>
-        <td>${reservation.voyageNom}</td>
-        <td>${reservation.date}</td>
-        <td>${reservation.statut}</td>
-        <td>
-          <button class="btn btn-danger btn-sm" data-index="${index}">Supprimer</button>
-        </td>
-      </tr>
-    `
+        <tr>
+          <td>${reservation.voyageNom}</td>
+          <td>Du ${reservation.dateDepart} au ${reservation.dateRetour}</td>
+          <td>${reservation.statut}</td>
+          <td>${reservation.dateReservation}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" data-index="${index}">Supprimer</button>
+          </td>
+        </tr>
+      `
       )
       .join("");
 
@@ -41,26 +32,16 @@ export const Panier = (element) => {
     });
   };
 
-  // Fonction pour supprimer une réservation
   const removeReservation = (index) => {
     reservations.splice(index, 1);
     saveReservations();
     renderReservations();
   };
 
-  // Fonction pour confirmer les réservations
-  const confirmReservations = () => {
-    if (reservations.length === 0) {
-      alert("Votre panier est vide.");
-      return;
-    }
-    alert("Vos réservations ont été confirmées.");
-    localStorage.removeItem("reservations");
-    reservations = [];
-    renderReservations();
+  const saveReservations = () => {
+    localStorage.setItem("reservations", JSON.stringify(reservations));
   };
 
-  // Injecter le HTML du panier dans l'élément donné
   element.innerHTML = `
     <div class="container mt-5">
       <h1>Votre Panier</h1>
@@ -68,10 +49,10 @@ export const Panier = (element) => {
         <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col">Client</th>
               <th scope="col">Voyage</th>
-              <th scope="col">Date</th>
+              <th scope="col">Dates</th>
               <th scope="col">Statut</th>
+              <th scope="col">Date de Réservation</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -86,11 +67,20 @@ export const Panier = (element) => {
     </div>
   `;
 
-  // Ajouter un event listener au bouton "Confirmer les Réservations"
-  element
-    .querySelector("#confirm-button")
-    .addEventListener("click", confirmReservations);
+  element.querySelector("#confirm-button").addEventListener("click", () => {
+    confirmReservations();
+  });
 
-  // Afficher les réservations au chargement de la page
+  const confirmReservations = () => {
+    if (reservations.length === 0) {
+      alert("Votre panier est vide.");
+      return;
+    }
+    alert("Vos réservations ont été confirmées.");
+    localStorage.removeItem("reservations");
+    reservations = [];
+    renderReservations();
+  };
+
   renderReservations();
 };

@@ -88,7 +88,9 @@ export const Voyage = (element) => {
       client,
       voyageNom: voyage.nom,
       voyageId: voyage.id,
-      date: new Date().toLocaleDateString(),
+      dateDepart: voyage.depart, // Ajout de la date de début
+      dateRetour: voyage.retour, // Ajout de la date de fin
+      dateReservation: new Date().toLocaleDateString(), // Date de réservation
       statut: "En attente",
     };
     reservations.push(reservation);
