@@ -7,7 +7,7 @@ export const Nav = (element) => {
     { href: "/", text: "Accueil" },
     { href: "/voyages", text: "Voyages" },
     { href: "/contact", text: "Contact" },
-    { href: "/panier", text: "Panier" },
+    { href: "/panier", text: "Reservation" },
   ];
 
   element.innerHTML = `

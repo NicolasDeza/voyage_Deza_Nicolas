@@ -70,7 +70,6 @@ export const Contact = (element) => {
   const sendContactForm = (contactData) => {
     console.log("Données du formulaire de contact :", contactData);
 
-    // Afficher un message de succès
     element.innerHTML += `
       <div class="alert alert-success mt-4" role="alert">
         Votre message a été envoyé avec succès. Merci de nous avoir contactés !
